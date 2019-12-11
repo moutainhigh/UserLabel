@@ -1,0 +1,350 @@
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body ,html{
+	width:100%;
+	height:100%;
+	background: #191f38;
+	font-family: 'Open Sans', Arial, Helvetica, Sans-serif, Verdana, Tahoma;
+	
+}
+
+ul {
+	list-style-type: none;
+}
+
+a {
+	color: #b63b4d;
+	text-decoration: none;
+}
+
+/** =======================
+ * Contenedor Principal
+ ===========================*/
+h1 {
+ 	color: #FFF;
+ 	font-size: 24px;
+ 	font-weight: 400;
+ 	text-align: center;
+ 	margin-top: 80px;
+ }
+
+h1 a {
+ 	color: #c12c42;
+ 	font-size: 16px;
+ }
+ .nav-button{
+    cursor: pointer;
+    float:left;
+	display:inline-block;
+	width:50px;
+	height:50px;
+	border-right:1px solid #38405a;
+	background-size: 80px;
+	display:block;
+}
+ .nav-button-open{
+    cursor: pointer;
+    float:left;
+	display:inline-block;
+	width:50px;
+	height:50px;
+	background:  url("../img/menu.png") no-repeat 6px 8px;  /*列表button*/
+	background-size: 70px;
+	display:block;
+}
+ .nav-button-open:hover{
+    cursor: pointer;
+    float:left;
+	display:inline-block;
+	width:50px;
+	height:50px;
+	background:  url("../img/menu-hover.png") no-repeat 6px 8px;  /*列表button*/
+	background-size: 70px;
+}
+ .nav-button-close{
+    cursor: pointer;
+    float:left;
+	display:inline-block;
+	width:50px;
+	height:50px;
+	border-right:1px solid #38405a;
+	background:  url("../img/menu.png") no-repeat -27px 8px;  /*列表button*/
+	background-size: 70px;
+	display:block;
+}
+ .nav-button-close:hover{
+    cursor: pointer;
+    float:left;
+	display:inline-block;
+	width:50px;
+	height:50px;
+	background:  url("../img/menu-hover.png") no-repeat -27px 8px;  /*列表button*/
+	background-size: 70px;
+}
+ .left-nav{
+    position:absolute;
+    z-index:3;
+	top:0;
+	left:0;
+	width:45px;
+	height:100%;
+	display:block;
+	background-image: linear-gradient(to top, #252b44 0%, #323a52 100%);
+	-moz-box-shadow: 0px 10px 60px rgba(0,0,0,.3);
+	-webkit-box-shadow: 0px 10px 60px rgba(0,0,0,.3);
+	 box-shadow: 0px 10px 60px rgba(0,0,0,.3);
+	 overflow-x:hidden;
+	 overflow-y:auto;
+	-webkit-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+	 transition: all 0.4s ease;
+}
+.open-box{
+	width:230px;
+	height:100%;
+	-moz-box-shadow: 0px 10px 60px rgba(0,0,0,.3);
+	-webkit-box-shadow: 0px 10px 60px rgba(0,0,0,.3);
+	 box-shadow: 0px 10px 60px rgba(0,0,0,.3);
+	
+
+}
+
+ .accordion {
+    position: relative;
+    z-index:1;
+ 	width: 230px;
+ 	margin:0;
+ 	border-radius: 0;
+ 	border-bottom:1px solid #38405a;
+ }
+ /*.accordion li:hover{
+	background: #39679f;
+	border-left:0px solid #ffca6f;
+}*/
+
+.accordion .link {
+	cursor: pointer;
+	display: block;
+	padding: 10px 15px 10px 0px;
+	color: #98a6b7;
+	font-size: 15px;
+	font-weight: 600;
+	border-bottom: 1px solid #38405a;
+	position: relative;
+	-webkit-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+}
+
+.accordion li:last-child .link {
+	border-bottom: 0;
+}
+
+.accordion li i {
+	position: absolute;
+	top: 15px;
+	left: 16px;
+	font-size: 14px;
+	color: #98a6b7;
+	-webkit-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+}
+
+.accordion li ul a {
+ 	color: #FFF;
+ }
+.accordion li i.fa-chevron-down {
+	right: 18px;
+	left: auto;
+	font-size: 12px;
+}
+
+.accordion li.open .link {
+	color: #8d9aab;
+}
+
+.accordion li.open i {
+	color: #8d9aab;
+}
+.accordion li.open i.fa-chevron-down {
+	-webkit-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+
+
+
+
+/* Submenu */
+ .submenu {
+ 	display: none;
+ 	background: #232b42;
+ 	font-size: 14px;
+ }
+
+ .submenu li {
+ 	border-bottom: 1px solid #2e354d;
+	cursor: pointer;
+    z-index:2;
+    overflow:auto;
+ }
+
+ .submenu a {
+	cursor: pointer;
+ 	display: block;
+ 	text-decoration: none;
+ 	color: #818e9f;
+ 	padding: 12px;
+ 	padding-left: 42px;
+ 	-webkit-transition: all 0.25s ease;
+ 	-o-transition: all 0.25s ease;
+ 	transition: all 0.25s ease;
+ }
+
+ .submenu a:hover {
+ 	color: #FFF;
+	border-left:2px solid #ffca6f;
+ }
+ 
+  .active {
+ 	background: #3a689f;
+ 	color: #FFF;
+	border-left:0px solid #ffca6f;
+ }
+ 
+ 
+ /* 三级菜单 */
+ 
+  /* .left-nav .nav .accordion li ul {
+    position: relative;
+    width:230px;
+ }*/
+
+.three{
+	position: relative;
+    z-index:2;
+	margin-top:0;
+	width:230px;
+	height:0;
+	overflow:hidden;
+	margin-left:0;
+	background:#45526f;
+	margin-left:0px;
+	margin-top:0px;
+	border-top: 1px solid #2e354d;
+	 
+	-webkit-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+	 transition: all 0.4s ease;
+}
+.three li{
+	background: #1f273b;
+}
+.three li a{
+	border-left:0px solid #6c7897;
+}
+.three li a:hover{
+	background: #6c7897;
+	border-left:2px solid #ffca6f;
+	-webkit-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+	 transition: all 0.4s ease;
+}
+.accordion .list:hover .three{
+	height:auto ! important;
+	-webkit-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+	 transition: all 0.4s ease;
+	
+}
+
+
+/*首页-用户*/
+a{
+	text-decoration:none
+}
+.user-box{
+	position:relative;
+	width:0;
+	height:60px;
+	overflow:hidden;
+	display:block;
+}
+.open-user-box{
+	position:relative;
+	width:100%;
+	max-width:230px;
+	height:150px;
+	overflow:hidden;
+	display:block;
+}
+.user-header{
+	position:absolute;
+	left:50%;
+	margin-left:-25px;
+	width:50px;
+	height:50px;
+	margin-top:35px;
+	border-radius: 50%;;
+	border:3px solid #a24f85;
+}
+.user-name{
+	font-size:17px;
+	color:#93a0b2;
+	text-align:center;
+	margin-top:95px;
+	font-weight:800;
+}
+.back-home{
+	cursor: pointer;
+	display:block;
+	width:230px;
+	height:43px;
+	line-height:40px;
+	border-bottom: 1px solid #38405a;
+	border-top: 1px solid #38405a;
+	color: #98a6b7;
+	font-size:15px;
+	font-weight:600;
+}
+.back-home p{
+	display:inline-block;
+	margin-left:0px;
+}
+.ico-home{
+	dispaly:inline-black;
+	width:18px;
+	height:18px;
+	margin:0 10px 0 14px;
+	border:0;
+}
+.ico-home img{
+	width:100%;
+	border:0;
+}
+
+
+
+.close-submenu-2{
+	height:0px;
+	overflow:hidden;
+}
+.open-submenu-2{
+	height:auto;
+	overflow:auto;
+}
+.user-box-phone{
+	display:none;
+}
+
+.user{
+	display:none;
+}

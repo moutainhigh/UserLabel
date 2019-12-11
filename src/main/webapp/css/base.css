@@ -1,0 +1,733 @@
+@charset "utf-8";
+
+
+/* 通用 css 样式 */
+
+body,html{position:relative;height:100%}
+body{margin:0;padding:0;background:#eee;color:#000;font-size:14px;font-family:Helvetica Neue,Helvetica,Arial,sans-serif}.swiper-container{width:100%;height:100%}
+
+.swiper-slide{
+	display:-webkit-box;
+	display:-ms-flexbox;
+	display:flex;
+	background:#fff;
+	text-align:center;
+	font-size:18px;
+	-webkit-box-pack:center;
+	-ms-flex-pack:center;
+	justify-content:center;
+	-webkit-box-align:center;
+	-ms-flex-align:center;
+	align-items:center
+}
+
+
+.btn-down{position:absolute;z-index: 999999; top:93%;bottom:0;height:7%;text-align:center}.btn-down,.btn-down-arraw img{width:100%}.btn-down-arraw{margin:0 auto;width:20px;height:20px;-webkit-animation:up-fade 1s ease 0s infinite}@-webkit-keyframes up-fade{0%{opacity:1}to{opacity:.5;-webkit-transform:translate3d(0,-6px,0)}}.btn{position:absolute;top:44%;left:35%;width:30%;height:2rem}@media (min-width:415px){.swiper-container{top:0;right:0;bottom:0;left:0;margin:auto;width:414px;height:690px;}}
+/* 首页 css */
+	
+.home {
+	position: relative;
+	overflow: hidden;
+	height: 100%;
+	width: 100%;
+	background: url(../img/bg.jpg) no-repeat;
+	background-position: top;
+	background-size: 100%;
+}
+
+.home .bt {
+	position: relative;
+	z-index: 1000;
+	width: 100%;
+	animation: bt 1.5s infinite /* 时间 */;
+	animation-direction: alternate /* infinite重复播放 ；alternate 循环播放*/;
+	animation-iteration-count: 1 /* 播放次数 */;
+	animation-delay: 0s /* 延时启动 */;
+	animation-fill-mode: forwards;
+    /* Safari and Chrome */
+	-webkit-animation: bt 1.5s infinite /* 时间 */;
+	-webkit-animation-direction: infinite /* infinite重复播放 ；alternate 循环播放*/;
+	-webkit-animation-iteration-count: 1 /* 播放次数 */;
+	-webkit-animation-delay: 0s /* 延时启动 */;
+}
+
+@keyframes bt {
+	0% {
+		opacity: 0;
+		top: -200px;
+	}
+
+	100% {
+		opacity: 1;
+		top: 0px;
+	}
+}
+
+@-webkit-keyframes bt {
+	0% {
+		opacity: 0;
+		top: -200px;
+	}
+
+	100% {
+		opacity: 1;
+		top: 0px;
+	}
+}/* Safari 和 Chrome */
+
+.home .bt img {
+	width: 80%;
+	margin: 0 auto;
+	margin-top: 50px;
+}
+
+.home .bulid {
+	position: absolute;
+	z-index: 998;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	animation: bulid 1s infinite;
+	animation-direction: alternate;
+	animation-iteration-count: 1;
+    /* Safari and Chrome */
+	-webkit-animation: bulid 1s infinite;
+	-webkit-animation-direction: infinite;
+	-webkit-animation-iteration-count: 1;
+}
+
+@keyframes bulid {
+	from {
+		bottom: 100px;
+	}
+
+	to {
+		bottom: 0;
+	}
+}
+
+@-webkit-keyframes bulid {
+	from {
+		bottom: 100px;
+	}
+
+	to {
+		bottom: 0;
+	}
+} /*Safari and Chrome*/
+
+.home .bulid img {
+	width: 100%;
+}
+
+.home span .img2 {
+	position: absolute;
+	left: 100px;
+	width: 50px;
+	margin-left: 0px;
+	animation: img2 1s infinite;
+	animation-direction: alternate;
+    /* Safari and Chrome */
+	-webkit-animation: img2 2s infinite;
+	-webkit-animation-direction: alternate;
+}
+
+@keyframes img2 {
+	from {
+		top: 200px;
+	}
+
+	to {
+		top: 240px;
+	}
+}
+
+@-webkit-keyframes img2 {
+	from {
+		top: 200px;
+	}
+
+	to {
+		top: 240px;
+	}
+} /*Safari and Chrome*/
+
+
+.home span .img3 {
+	position: absolute;
+	width: 30px;
+	right: 50px;
+	margin-left: 130px;
+	animation: img3 2s infinite;
+	animation-direction: alternate;
+    /* Safari and Chrome */
+	-webkit-animation: img3 2s infinite;
+	-webkit-animation-direction: alternate;
+}
+
+@keyframes img3 {
+	from {
+		top: 300px;
+	}
+
+	to {
+		top: 280px;
+	}
+}
+
+@-webkit-keyframes img3 {
+	from {
+		top: 300px;
+	}
+
+	to {
+		top: 280px;
+	}
+} /*Safari and Chrome*/
+
+	
+
+
+
+/* ----------------通用 css---------------- */
+
+.second-box {
+	position: relative;
+	display:inline-block;
+	width: 100%;
+	height: 100%;
+	background: #f9f9f9 url(../img/bg-2.jpg) no-repeat;
+	background-position: top;
+	background-size: 100%;
+}
+
+.second-box .title {
+	position:relative;
+	display:inline-block;
+	width: 100%;
+	height: 20%;
+	top:0;
+}
+
+.second-box .title .text-box {
+	position:relative;
+	display:inline-block;
+	margin:0 auto;
+	width: 90%;
+	height: 40%;
+	top:30%;
+	background: #fff;
+	border-radius:4px;
+	-moz-box-shadow: 0px 0px 25px rgba(0,0,0.1);/* For Firefox3.6+ */
+	-webkit-box-shadow: 0px 0px 25px rgba(0,0,0,0.1);/* For Chrome5+, Safari5+ */
+	box-shadow: 0px 0px 25px rgba(0,0,0,0.1);/* For Latest Opera */
+}
+.second-box .title .text-box span {
+	position:relative;
+	top:28%;
+	text-align: center;
+	line-height: 40%;
+	font: 14px  sans-serif;
+	font-weight: 900;
+	color: #2cbda2;
+}
+
+.second-box .title .text-box2{
+	position:relative;
+	display:inline-block;
+	margin:0 auto;
+	width: 90%;
+	height: 40%;
+	top:30%;
+	overflow: hidden;
+	background: #fff;
+	border-radius:4px;
+	-moz-box-shadow: 0px 0px 25px rgba(0,0,0.1);/* For Firefox3.6+ */
+	-webkit-box-shadow: 0px 0px 25px rgba(0,0,0,0.1);/* For Chrome5+, Safari5+ */
+	box-shadow: 0px 0px 25px rgba(0,0,0,0.1);/* For Latest Opera */
+}
+.second-box .title .text-box2 .ten {
+	position:relative;
+	width: 120%;
+	top:28%;
+	text-align: center;
+	line-height: 40%;
+	font: 14px  sans-serif;
+	font-weight: 900;
+	color: #2cbda2;
+	overflow: hidden;
+	white-space: nowrap; 
+
+	animation: ten 4s infinite;
+	animation-direction: infinite;
+    /* Safari and Chrome */
+	-webkit-animation: ten 4s infinite;
+	-webkit-animation-direction: infinite;
+}
+
+@keyframes ten {from {left:40px;}to {left: -53px;}}
+@-webkit-keyframes ten {from {left: 40px;}to {left: -53px;}} /*Safari and Chrome*/
+
+
+
+.second-box .text {
+	position: relative;
+	margin:0;
+	height:70%;
+	width:100%;
+}
+
+.second-box .text ul {
+	position: relative;
+	height:100%;
+	top:-8%;
+}
+
+.second-box .text ul li {
+	position: relative;
+	display: block;
+	float: left;
+	width: 42.5%;
+	height:45%;
+	margin: 5% 0 0 5%;
+	background: #fff url(../img/text-bg.png) no-repeat;
+	background-position: center;
+	background-size: 100% 100%;
+	border-radius: 4px;
+	border:1px solid #e6e6e6;
+	-moz-box-shadow: 0px 0px 25px rgba(0,0,0,0.1);
+               /* For Firefox3.6+ */
+	-webkit-box-shadow: 0px 0px 25px rgba(0,0,0,0.1);
+            /* For Chrome5+, Safari5+ */
+	box-shadow: 0px 0px 25px rgba(0,0,0,0.1);
+                    /* For Latest Opera */
+}
+
+.second-box .text ul li .icon {
+	display: block;
+	width:50px;
+	height: 50px;
+	margin:15% auto;
+	border-radius: 35px;
+	overflow: hidden;
+	border:2px solid #fff;
+	-moz-box-shadow: 0px 0px 25px rgba(0,0,0,0.1);
+               /* For Firefox3.6+ */
+	-webkit-box-shadow: 0px 0px 25px rgba(0,0,0,0.1);
+            /* For Chrome5+, Safari5+ */
+	box-shadow: 0px 0px 25px rgba(0,0,0,0.1);
+                    /* For Latest Opera */
+}
+
+.second-box .text ul li .icon img {
+	width:53px;
+	height:53px;
+	margin:-2px 0 0 -3px;
+}
+
+.second-box .text ul li p {
+	text-align: center;
+	height: 30px;
+	line-height: 18px;
+	margin: -5px 10px;
+	font-size: 12px;
+	color: #777;
+}
+
+.second-box .text ul li .small-p {
+	text-align: center;
+	height: 30px;
+	margin-top: 20px;
+	font-size: 9px;
+	color: #999;
+}
+
+.second-box .text ul li .number {
+	color:#fac254;
+	font-size:17px;
+	font-weight:800;
+}
+
+.second-box .data-box {
+	position:relative;
+	overflow: hidden;
+	width: 90%;
+	top: -38%;
+	left: 5%;
+	height: 33%;
+	background: #fff;
+	border: 1px solid  #e6e6e6;
+	border-radius: 4px;
+	-moz-box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+               /* For Firefox3.6+ */
+	-webkit-box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+            /* For Chrome5+, Safari5+ */
+	box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+                    /* For Latest Opera */
+}
+
+.second-box .data {
+	position: relative;
+	width:auto;
+	height:90%;
+	margin:10px 10px;
+	border-radius: 4px;
+	border:1px solid #fdfdfd;
+}
+
+.second-box .data-box2 {
+	position:relative;
+	overflow: hidden;
+	width: 90%;
+	top: 0%;
+	left: 5%;
+	height: 35%;
+	background: #fff;
+	border: 1px solid  #e6e6e6;
+	border-radius: 4px;
+	-moz-box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+               /* For Firefox3.6+ */
+	-webkit-box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+            /* For Chrome5+, Safari5+ */
+	box-shadow: 0px 0px 15px rgba(0,0,0,0.15);
+                    /* For Latest Opera */
+}
+
+.second-box .data-box2 .data {
+	position: relative;
+	width:auto;
+	height:90%;
+	margin:10px 10px;
+	border-radius: 4px;
+	border:1px solid #fdfdfd;
+}
+
+
+/*饼图*/
+.second-box .data-box3 {
+	position:relative;
+	overflow: hidden;
+	float:left;
+	width: 90%;
+	top: -38%;
+	left: 5%;
+	height: 38%;
+	background: #fff;
+	border: 1px solid  #e6e6e6;
+	border-radius: 4px;
+	-moz-box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+               /* For Firefox3.6+ */
+	-webkit-box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+            /* For Chrome5+, Safari5+ */
+	box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+                    /* For Latest Opera */
+}
+
+.second-box .data-box3 .data-1 {
+	position: relative;
+	float:left;
+	width:45%;
+	height:90%;
+	margin:10px 10px 10px 10px;
+	border-radius: 4px;
+	border:1px solid #fdfdfd;
+}
+.second-box .data-box3 .data-2 {
+	position: relative;
+	float:left;
+	width:45%;
+	height:90%;
+	margin:10px 10px 10px 5px;
+	border-radius: 4px;
+	border:1px solid #fdfdfd;
+}
+
+/*饼图*/
+.second-box .data-box4 {
+	position:relative;
+	overflow: hidden;
+	width: 90%;
+	top: 0%;
+	left: 5%;
+	height: 35%;
+	background: #fff;
+	border: 1px solid  #e6e6e6;
+	border-radius: 4px;
+	-moz-box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+               /* For Firefox3.6+ */
+	-webkit-box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+            /* For Chrome5+, Safari5+ */
+	box-shadow: 0px 0px 15px rgba(0,0,0,0.15);
+                    /* For Latest Opera */
+}
+
+.second-box .data-box4 .data-1 {
+	position: relative;
+	float:left;
+	width:45%;
+	height:90%;
+	margin:10px 10px 10px 10px;
+	border-radius: 4px;
+	border:1px solid #fdfdfd;
+}
+.second-box .data-box4 .data-2 {
+	position: relative;
+	float:left;
+	width:45%;
+	height:90%;
+	margin:10px 10px 10px 5px;
+	border-radius: 4px;
+	border:1px solid #fdfdfd;
+}
+
+
+/*top5 开始*/
+
+::-webkit-scrollbar {
+	display: none
+}
+
+.second-box .five {
+	position: relative;
+	top:-3%;
+	width: 100%;
+	height:175px;
+	overflow-x: scroll;
+}
+
+.second-box  .five .five-box {
+	position: relative;
+	height: 175px;
+	width:94%;
+	margin:0 3%;
+
+}
+
+.second-box .five .five-box .small-box {
+	position: relative;
+	display: inline-block;
+	float: left;
+	height: 130px;
+	width:30%;
+	margin:40px 1.666% 40px 1.666%;
+	border-radius: 4px;
+	
+	background: #fff url(../img/text-bg.png) no-repeat;
+	background-size: 100% 100%;
+	border: 1px solid  #e6e6e6;
+	
+	-moz-box-shadow: 0px 0px 10px rgba(0,0,0,0.1);/* For Firefox3.6+ */
+	-webkit-box-shadow: 0px 0px 10px rgba(0,0,0,0.1);/* For Chrome5+, Safari5+ */
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.1);/* For Latest Opera */
+}
+
+.second-box .five .five-box .one {
+	height: 140px;
+	margin-top:30px;
+}
+
+.second-box .five .five-box .small-box .small-box-img {
+	position: relative;
+	top:-25px;
+	margin:0 auto;
+	width:50px;
+	height:50px;
+	border: 1px solid #e6e6e6;
+	border-radius:25px;
+	font-weight: 900;
+	overflow: hidden;
+
+	-moz-box-shadow: 0px 2px 7px rgba(0,0,0,0.1);
+               /* For Firefox3.6+ */
+	-webkit-box-shadow: 0px 2px 7px rgba(0,0,0,0.1);
+            /* For Chrome5+, Safari5+ */
+	box-shadow: 0px 2px 7px rgba(0,0,0,0.1);
+                    /* For Latest Opera */
+}
+
+
+.second-box .five .five-box .one .small-box-img {
+	background: #fff url(../img/icon/1.jpg) no-repeat;
+	background-size: 100% 100%;
+	border: 1px solid  #e6e6e6;
+}
+
+.second-box .five .five-box .two .small-box-img {
+	background: #fff url(../img/icon/2.jpg) no-repeat;
+	background-size: 100% 100%;
+	border: 1px solid  #e6e6e6;
+}
+
+.second-box .five .five-box .three .small-box-img {
+	background: #fff url(../img/icon/3.jpg) no-repeat;
+	background-size: 100% 100%;
+	border: 1px solid  #e6e6e6;
+}
+
+.second-box .five .five-box .small-box .p1 {
+	position: relative;
+	text-align: center;
+	top:-10px;
+	font-size: 16px;
+	color: #999;
+	font-weight: 800px;
+}
+
+.second-box .five .five-box .small-box .line {
+	position: relative;
+	margin:0 auto;
+	height:3px;
+	width:10px;
+	top:-5px;
+	background: #2cbda2;
+}
+
+.second-box .five .five-box .small-box .p2 {
+	position: relative;
+	top:0px;
+	text-align: center;
+	font-size: 13px;
+	font-weight: 800px;
+	color: #999;
+}
+
+/*--------------------------------top5 结束 --------------------------------*/
+
+
+.page-end {
+	background: url(../img/bg-end.jpg) no-repeat;
+	background-position: top;
+	background-size: 100%;
+}
+
+.page-end span .img5 {
+	position: absolute;
+	width: 100px;
+	margin-left: 0;
+	margin-top: 100px;
+	animation: img5 2s infinite;
+	animation-direction: alternate;
+    /* Safari and Chrome */
+	-webkit-animation: img5 2s infinite;
+	-webkit-animation-direction: alternate;
+}
+
+@keyframes img5 {
+	from {
+		top: 100px;
+		left: 0;
+	}
+
+	to {
+		top: 120px;
+		left: 0;
+	}
+}
+
+@-webkit-keyframes img5 {
+	from {
+		top: 100px;
+		left: 0;
+	}
+
+	to {
+		top: 120px;
+		left: 0;
+	}
+} /*Safari and Chrome*/
+
+
+.page-end span .img6 {
+	position: absolute;
+	width: 70px;
+	margin-left: 0;
+	margin-top: 100px;
+	animation: img6 2s infinite;
+	animation-direction: alternate;
+    /* Safari and Chrome */
+	-webkit-animation: img6 2s infinite;
+	-webkit-animation-direction: alternate;
+}
+
+@keyframes img6 {
+	from {
+		bottom: 20px;
+		right: 0;
+	}
+
+	to {
+		bottom: 0px;
+		right: 0;
+	}
+}
+
+@-webkit-keyframes img6 {
+	from {
+		bottom: 20px;
+		right: 0;
+	}
+
+	to {
+		bottom: 0px;
+		right: 0;
+	}
+} /*Safari and Chrome*/
+
+
+
+
+
+
+
+/* 这里开始时iphone x 适配 css */
+
+@media only screen and (width: 375px) and (height: 724px) {
+
+.second-box .text ul li .icon {
+	display: block;
+	width:70px;
+	height: 70px;
+	margin:18% auto;
+	top:12%;
+	border-radius: 35px;
+	overflow: hidden;
+	border:2px solid #fff;
+	-moz-box-shadow: 0px 0px 25px rgba(0,0,0,0.1);
+               /* For Firefox3.6+ */
+	-webkit-box-shadow: 0px 0px 25px rgba(0,0,0,0.1);
+            /* For Chrome5+, Safari5+ */
+	box-shadow: 0px 0px 25px rgba(0,0,0,0.1);
+                    /* For Latest Opera */
+}
+
+.second-box .text ul li .icon img {
+	width:73px;
+	height:73px;
+	margin:-2px 0 0 -3px;
+}
+
+}
+
+/* 这里开始时安卓 360*640屏幕 适配 css */
+
+@media only screen and (width: 360px) and (height: 640px) {
+
+.second-box {
+	position: relative;
+	display:inline-block;
+	width: 100%;
+	height: 100%;
+	background: url(../img/android360-640.jpg) no-repeat -50px 0px;
+	background-position: top;
+	background-size: 100%;
+	font-
+}
+.second-box .title .text-box {
+	top:30%;
+}
+
+.second-box .text ul li .icon {
+	margin:12% auto;
+}
+
+}
