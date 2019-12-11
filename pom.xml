@@ -8,7 +8,7 @@
   <packaging>war</packaging>
   <name>stockmanagement-bi</name>
    <properties>
-		<spring.version>4.3.2.RELEASE</spring.version>
+		<spring.version>5.2.2.RELEASE</spring.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	<dependencies>
